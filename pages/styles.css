@@ -10,7 +10,7 @@ body {
     display: flex;
     place-content: center flex-start;
     align-items: center;
-    background-color: rgb(0, 0, 0);
+    background-image: url("../assets/socrates.png");
     flex-flow: column nowrap;
     gap: 10px;
     height: 100vh;
@@ -80,14 +80,14 @@ body {
 
 .prompt-box {
     border-bottom-width: 1px;
-    border-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.4);
     border-left-width: 1px;
     border-right-width: 1px;
     border-style: solid;
     border-top-width: 1px;
     place-content: flex-start;
     align-items: flex-start;
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: rgba(255, 255, 255, 0.2);
     border-radius: 16px;
     display: flex;
     flex: 0 0 auto;
@@ -108,10 +108,23 @@ body {
     letter-spacing: 0px;
     line-height: 1.6em;
     text-align: start;
-    color: rgba(255, 255, 255, 0.75);
+    color: rgba(255, 255, 255);
     text-decoration: none;
     text-transform: none;
 }
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 0.7; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: white;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: white;
+  }
 
 textarea {
     font-family: 'Manrope', sans-serif;
@@ -172,7 +185,7 @@ textarea {
 .generate-button {
     place-content: flex-start;
     align-items: flex-start;
-    background-color: rgb(255, 79, 18);
+    background-color: rgb(0, 0, 0);
     border-radius: 100px;
     display: flex;
     flex: 0 0 auto;
@@ -216,6 +229,11 @@ textarea {
     position: fixed;
     width: auto;
     z-index: 1;
+}
+
+.bc-right {
+    right: 20px;
+    left: unset;
 }
 
 .badge-container a {
@@ -323,7 +341,7 @@ textarea {
 .output-content p {
     text-align: center;
     white-space: pre-line;
-    color: rgba(255, 255, 255, 0.5);
+    color: white;
 }
 
 @media (min-width: 810px) and (max-width: 1199px) {
