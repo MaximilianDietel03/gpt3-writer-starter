@@ -14,7 +14,7 @@ const Home = () => {
     console.log("Calling OpenAI...")
     let data;
     try {
-      response = await fetch('/api/generate', {
+      const response = await fetch('/api/generate', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
