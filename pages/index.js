@@ -12,13 +12,20 @@ const Home = () => {
     setIsGenerating(true);
     
     console.log("Calling OpenAI...")
-    const response = await fetch('/api/generate', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ userInput }),
-    });
+    let response;
+    try {
+      response = await fetch('/api/generate', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ userInput }),
+      });
+    } catch (error) {
+      console.error(error);
+      setIsGenerating(false);
+      return;
+    }
 
     const data = await response.json();
     const { output } = data;
