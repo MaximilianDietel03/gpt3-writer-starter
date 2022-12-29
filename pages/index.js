@@ -28,7 +28,7 @@ const Home = () => {
       return;
     }
     const { output } = data;
-    console.log("OpenAI replied...", output.text)
+    console.log("🥳 OpenAI replied...", output.text)
 
     setApiOutput(`${output.text}`);
     setIsGenerating(false);
