@@ -94,7 +94,7 @@ const Home = () => {
 
       <div className="badge-container bc-right grow">
         <a
-          href="https://buildspace.so/builds/ai-writer"
+          href="https://github.com/MaximilianDietel03/gpt3-writer-extension-starter"
           target="_blank"
           rel="noreferrer"
         >
